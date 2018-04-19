@@ -21,7 +21,8 @@ public:
 
   ///* if this is false, radar measurements will be ignored (except for init)
   bool use_radar_;
-
+    int NIS_radar_;
+    int NIS_laser_;
   ///* state vector: [pos1 pos2 vel_abs yaw_angle yaw_rate] in SI units and rad
   VectorXd x_;
 
@@ -63,10 +64,15 @@ public:
 
   ///* Augmented state dimension
   int n_aug_;
+    int n_z;
 
   ///* Sigma point spreading parameter
   double lambda_;
-
+    
+  double previous_timestamp_;
+    
+    //set augmented dimension
+    
 
   /**
    * Constructor

@@ -3,3 +3,10 @@
 
 # build files
 build/
+.
+..
+.DS_Store
+.git
+.gitignore
+.ipynb_checkpoints
+
